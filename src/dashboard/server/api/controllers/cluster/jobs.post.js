@@ -10,7 +10,7 @@ module.exports = async context => {
   const { cluster, user } = context.state
 
   const job = Object.assign({}, context.request.body)
-  job['Password'] = user.Password
+  job['Password'] = user.password
   job['familyToken'] = uuid()
   job['isParent'] = 1
 
